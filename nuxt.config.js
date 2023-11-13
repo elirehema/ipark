@@ -1,7 +1,13 @@
+const routerBase = process.env.DEPLOY_ENV === 'production' ? '/ipark/' : '/'
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   target: 'static',
+  router: {
+    mode: 'hash',
+    base: routerBase,
+    routerNameSplitter: '/',
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -55,5 +61,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    publicPath: process.env.NODE_ENV === 'production' ? '/assets/' : '',
   }
 }
