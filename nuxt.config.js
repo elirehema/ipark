@@ -44,6 +44,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'nuxt-leaflet',
+    
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
