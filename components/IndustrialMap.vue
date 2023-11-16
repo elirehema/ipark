@@ -58,7 +58,7 @@ export default {
       url: "https://tile.openstreetmap.de/{z}/{x}/{y}.png",
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      zoom: 14,
+      zoom: 15,
       center: [-6.769969, 38.718365],
       marker: [-6.7749896656540844,38.71255541917059],
       fillColor: "#005163",
