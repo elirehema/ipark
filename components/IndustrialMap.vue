@@ -28,17 +28,14 @@
     <client-only>
       <l-map
         ref="myMap"
-        :zoom="13"
-        :center="[-6.769969, 38.718365]"
+        :zoom="zoom"
+        :center="center"
         @click="addMarker"
       >
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-        <l-marker :lat-lng="[-6.769969, 38.718365]"></l-marker>
+        <l-marker :lat-lng="marker"></l-marker>
 
         <l-geo-json :geojson="geojson" :options="options">
-          <l-control class="example-custom-control">
-            <p @click="showAlert">Click me</p>
-          </l-control>
         </l-geo-json>
       </l-map>
     </client-only>
@@ -58,11 +55,12 @@ export default {
   },
   data() {
     return {
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      url: "https://tile.openstreetmap.de/{z}/{x}/{y}.png",
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      zoom: 18,
+      zoom: 14,
       center: [-6.769969, 38.718365],
+      marker: [-6.7749896656540844,38.71255541917059],
       fillColor: "#005163",
       hoverColor: "#3b4876",
       enableTooltip: true,
