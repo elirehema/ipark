@@ -77,6 +77,7 @@ export default {
       soldColor: "#F3D2AC",
       activeColor: "#7DCF68",
       hoverColor: "#00B4EB",
+      roadColor:"#4d254e",
       enableTooltip: true,
       allowClick: false,
       boxTwo: "",
@@ -201,6 +202,7 @@ export default {
       var activeColor = this.activeColor;
       var soldColor = this.soldColor;
       var hoverColor = this.hoverColor;
+      var roadColor = this.roadColor;
       if (!this.enableTooltip) {
         return () => {};
       }
@@ -209,7 +211,7 @@ export default {
         layer.setStyle({
           weight: 1,
           color: "white",
-          fillColor: feature.properties.status ? this.activeColor : this.soldColor,
+          fillColor: feature.properties.type==0 ? roadColor : (feature.properties.status ? activeColor : soldColor),
           fillOpacity: 1,
         });
         layer.on("click", function (e) {
