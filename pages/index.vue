@@ -1,6 +1,6 @@
 <template>
-  <h1>UNDER CONSTRUCTION</h1>
-  <!--<IndustrialMap/>-->
+  <!--<h1>UNDER CONSTRUCTION</h1>-->
+  <IndustrialMap/>
 </template>
 
 <script>
